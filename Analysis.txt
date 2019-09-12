@@ -1,0 +1,174 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+Once you have completed your solution for each problem, perform a run time analysis (Worst Case Big-O Notation) of your solution. Document this for each problem and include this in your submission.\
+\
+TASK0
+\f1  \
+
+\f0 Read_csv reads everything at once, hence the complexity is O(1) \'96 n is the file ; one file read at one time
+\f2\fs32 \
+
+\f0\fs24 \'a0
+\f2\fs32 \
+
+\f0\fs24 Since there is one \'93calls\'94 file and one \'93texts\'94 file- the complexity is O(2)
+\f2\fs32 \
+
+\f0\fs24 \'a0
+\f2\fs32 \
+
+\f0\fs24 TASK1 \'96 Implementation 2
+\fs20 \super nd
+\fs24 \nosupersub  way
+\f2\fs32 \
+
+\f0\fs24 1.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Read_csv reads everything at once, hence the complexity is O(1)
+\f2\fs32 \
+
+\f0\fs24 Since there is \'93one\'94 calls file and one \'93texts\'94 file- the complexity is O(2)
+\f2\fs32 \
+
+\f0\fs24 2.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 For loop is executed depending on the rows in the file: O(n)- n is the number of rows in the file. There are two different loops : hence complexity is O(2n)
+\f2\fs32 \
+
+\f0\fs24 3.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Lets take the worst case and say the if condition is executed every time- which means all the numbers are distinct , then in this case complexity is O(n)
+\f2\fs32 \
+
+\f0\fs24 For calls , two if conditions have two if conditions \'96 hence O(2n)
+\f2\fs32 \
+
+\f0\fs24 4.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Appending is O(1)- for worst case- will be appending n times
+\f2\fs32 \
+
+\f0\fs24 O(n)- O(2n)
+\f2\fs32 \
+
+\f0\fs24 5.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Printing the output is O(1)
+\f2\fs32 \
+
+\f0\fs24 \'a0
+\f2\fs32 \
+
+\f0\fs24 Hence for call records: total complexity -O(6n+3)
+\f2\fs32 \
+
+\f0\fs24 Hence for text records: total complexity- O(6n+3)
+\f1  \
+\
+\
+\
+\
+
+\f0 TASK2
+\f1  \
+
+\f0 1.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Reading of the file is dependent on the size of the file, reads every line by line: O(n)
+\f2\fs32 \
+
+\f0\fs24 2.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 For loop to iterate through calls list: O(n)
+\f2\fs32 \
+
+\f0\fs24 3.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Either if or else condition will be executed: then this is executed once in one iteration, then O(n)
+\f2\fs32 \
+
+\f0\fs24 4.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Addition of the number inside the if-else condition is also once per iteration: so O(1) for one addition; for n iterations : O(n)
+\f2\fs32 \
+
+\f0\fs24 5.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Calculating maximum takes : O(1)
+\f2\fs32 \
+
+\f0\fs24 6.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Printing the output takes: O(1)
+\f2\fs32 \
+\
+
+\f0\fs24 Except step 1,5,6 , rest are same for receiving numbers as well.
+\f2\fs32 \
+
+\f0\fs24 Hence for reading the file , calling numbers and receiving numbers together : O(n) + O(3n)+ O(3n
+\f1  )\
+
+\f0 So total: O(7n+2)
+\f1  \
+\
+\
+\
+
+\f0 TASK3
+\f1  \
+
+\f0 1.             Reading of the file is dependent on the size of the file, reads every line by line: O(n)
+\f2\fs32 \
+
+\f0\fs24 2.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 For loop is executed n times : O(n)
+\f2\fs32 \
+
+\f0\fs24 3.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 O(2) for search of the pattern: (2n)
+\f2\fs32 \
+
+\f0\fs24 4.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 If condition in worst case will be executed once in every iteration, 4 if conditions: O(4n)
+\f2\fs32 \
+
+\f0\fs24 5.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Addition inorder to get the bangalore calls that are received: O(n)
+\f2\fs32 \
+
+\f0\fs24 6.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Dictionary is used to maintain the key value pairs and maintain the uniqueness, assigning the dictionary with key and value is executed once for if-else condition
+\f2\fs32 \
+
+\f0\fs24 If we say, in worst condition, if or else is executed n times , then in that case, assignment of key,value pairs is also executed n times
+\f2\fs32 \
+
+\f0\fs24 :O(n)
+\f2\fs32 \
+
+\f0\fs24 7.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 Printing the output is O(1)
+\f2\fs32 \
+
+\f0\fs24 \'a0
+\f2\fs32 \
+
+\f0\fs24 Hence: O(10n+1)
+\f1  \
+\
+\
+\
+
+\f0 TASK4
+\f1  \
+1.               
+\f0 Reading of the file is dependent on the size of the file, reads every line by line: O(n)
+\f2\fs32 \
+
+\f0\fs24 2.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 For loop is executed n times : O(n)
+\f2\fs32 \
+
+\f0\fs24 3.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 O(2) for search of the pattern: (2n)
+\f2\fs32 \
+
+\f0\fs24 4.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 If condition in worst case will be executed once in every iteration and so will the appending of the number to the telemarketer list
+\f2\fs32 \
+
+\f0\fs24 Hence O(n) and O(n) will be complexity for two if conditions
+\f2\fs32 \
+
+\f0\fs24 And O(n) and O(n) for appending or removing the elements from the telemarketers in the list
+\f2\fs32 \
+
+\f0\fs24 5.\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 O(1) for printing the output
+\f2\fs32 \
+
+\f0\fs24 This steps 1 to 4 also holds good for the texts csv file.
+\f2\fs32 \
+
+\f0\fs24 \'a0
+\f2\fs32 \
+
+\f0\fs24 Hence , total complexity is O(16n+1)
+\f1  }
